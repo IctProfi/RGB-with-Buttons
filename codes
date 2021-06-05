@@ -1,0 +1,54 @@
+
+
+int btn=13;
+int btn_2=12;
+int btn_3=11;
+
+int red=7;
+int blue=6;
+int green=5;
+int buttonstate=0;
+ 
+void setup()
+{
+    pinMode(5, OUTPUT);
+    pinMode(6, OUTPUT);
+    pinMode(7, OUTPUT);
+  
+    pinMode(11,INPUT);
+    pinMode(12,INPUT);
+    pinMode(13,INPUT);
+  
+}
+
+void loop()
+{
+  
+  analogWrite(red,0);
+  analogWrite(blue,0);
+  analogWrite(green,0);
+  
+  
+  if(digitalRead(btn)==HIGH)
+  {
+  	analogWrite(red,255);
+    analogWrite(blue,0);
+    analogWrite(green,0);
+    
+  }
+  if(digitalRead(btn_2)==HIGH)
+  {
+  	analogWrite(red,0);
+    analogWrite(blue,255);
+    analogWrite(green,0);
+    
+  }
+   if(digitalRead(btn_3)==HIGH)
+  {
+  	analogWrite(red,0);
+    analogWrite(blue,0);
+    analogWrite(green,255);
+    
+  }
+  
+}
