@@ -1,0 +1,25 @@
+int red=7;
+int blue=5;
+int green=6;
+int pot=A0;
+int pot_2=A1;
+int pot_3=A2;
+
+void setup()
+{
+  
+  }
+ void loop ()
+ {
+  int reading = map(analogRead(pot),0,1023,0,255);
+  int reading_2 = map(analogRead(pot_2),0,1023,0,255);
+  int reading_3 = map(analogRead(pot_3),0,1023,0,255);
+
+  analogWrite(red,reading);
+  analogWrite(green,reading_2);
+  analogWrite(red,reading_3);
+   delay(10);
+   
+
+   
+  }
